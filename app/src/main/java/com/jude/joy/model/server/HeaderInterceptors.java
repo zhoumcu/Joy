@@ -11,7 +11,7 @@ public class HeaderInterceptors implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
         Request.Builder builder = request.newBuilder();
-        builder.addHeader("apikey", "c676a989ffe83f89db5265482ef3222d");
+//        builder.addHeader("apikey", "c676a989ffe83f89db5265482ef3222d");
         return chain.proceed(builder.build());
     }
 }

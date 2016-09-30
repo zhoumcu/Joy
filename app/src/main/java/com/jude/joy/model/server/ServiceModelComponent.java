@@ -1,6 +1,7 @@
 package com.jude.joy.model.server;
 
 import com.jude.joy.module.image.ImageJoyPresenter;
+import com.jude.joy.module.test.TestJoyPresenter;
 import com.jude.joy.module.text.TextJoyPresenter;
 
 import javax.inject.Singleton;
@@ -16,4 +17,6 @@ public interface ServiceModelComponent {
     void inject(TextJoyPresenter model);
 
     void inject(ImageJoyPresenter model);
+
+    void inject(TestJoyPresenter model);
 }

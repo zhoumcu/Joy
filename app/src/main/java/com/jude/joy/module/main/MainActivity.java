@@ -17,6 +17,7 @@ import com.jude.beam.expansion.BeamBaseActivity;
 import com.jude.joy.R;
 import com.jude.joy.module.image.ImageJoyFragment;
 import com.jude.joy.module.setting.AboutUsActivity;
+import com.jude.joy.module.test.TestJoyFragment;
 import com.jude.joy.module.text.TextJoyFragment;
 
 import butterknife.BindView;
@@ -58,8 +59,10 @@ public class MainActivity extends BeamBaseActivity<MainPresenter> {
             switch (position) {
                 case 0:
                     return new TextJoyFragment();
-                default:
+                case 1:
                     return new ImageJoyFragment();
+                default:
+                    return new TestJoyFragment();
             }
         }
 
@@ -68,14 +71,16 @@ public class MainActivity extends BeamBaseActivity<MainPresenter> {
             switch (position) {
                 case 0:
                     return "段子";
-                default:
+                case 1:
                     return "图片";
+                default:
+                    return "测试";
             }
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
     }
 
